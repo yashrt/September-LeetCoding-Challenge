@@ -23,8 +23,8 @@ public:
     
     vector<int> getAllElements(TreeNode* root1, TreeNode* root2) {
         vector<int> res;
-        traverse(root1,res);
-        traverse(root2,res);
+        traverse(root1, res);
+        traverse(root2, res);
         sort(res.begin(), res.end());
         return res;
     }
