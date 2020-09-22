@@ -1,7 +1,7 @@
 class Solution {
 public:
     bool carPooling(vector<vector<int>>& trips, int capacity) {
-        map<int, int> timestamp;
+        vector<int> timestamp(1001, 0);
         for(auto trip : trips)
         {
             timestamp[trip[1]]+=trip[0];
@@ -10,7 +10,7 @@ public:
         int cap = 0;
         for(auto number : timestamp)
         {
-            cap += number.second;
+            cap += number;
             if(cap > capacity)
                 return false;
         }
